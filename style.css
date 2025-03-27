@@ -1,0 +1,43 @@
+/* Set the background to an image or gradient */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('flower.jpg'); /* Replace with your image file path or a URL */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    text-align: center;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.flowers::before {
+    content: "🌸 smile habibi 🌸";
+    font-size: 30px;
+    color: pink;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+    animation: move 5s linear infinite;
+}
+
+@keyframes move {
+    0% { top: 10px; }
+    50% { top: 50%; }
+    100% { top: 90%; }
+}
